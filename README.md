@@ -1,1 +1,1 @@
-Online hospital 112.
+![](https://raw.githubusercontent.com/fatiherikli/hospital/master/interface.svg)

@@ -52,12 +52,15 @@
   }
 
   footer {
-    text-align: center; font-family: helvetica, sans-serif; position: absolute; bottom: 20px;
-    padding: 0 20px;
+    text-align: center; font-family: helvetica, sans-serif; position: absolute; bottom: 0;
+    padding: 10px 20px;
+    z-index: 999;
+    background: black;
+    color: darkgray;
    }
 
-   a { color: default; }
-   a:visited { color: blue; }
+   a { color: white; }
+   a:visited { color: white; }
 
    time {
     display: inline-block;
@@ -105,7 +108,7 @@
   "
 
   >Security</button>
-  <img id="badsector" style="display: none" src="https://mm.pwn.pl/ency/jpg/583/16/d08i0192.jpg" />
+  <img id="badsector" width="35%" style="display: none; position: absolute; z-index: 9;" src="https://mm.pwn.pl/ency/jpg/583/16/d08i0192.jpg" />
  <button
 
 
@@ -182,9 +185,11 @@
   Your browser does not support the video tag.
 </video> 
 
+<br twotimes />
 
-
-<svg id="resourcemanager"
+<svg
+  style="margin-top: 50px;"
+  id="patient"
    xmlns:dc="https://purl.org/dc/elements/1.1/"
    xmlns:cc="https://creativecommons.org/ns"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -207,8 +212,7 @@
    xml:space="preserve"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Nervous_system_diagram-en.svg"
-   width="541"
-   height="601">
+   width="620">
     <metadata
      id="metadata321"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -5156,7 +5160,6 @@ document.getElementById('benjamin').addEventListener('click', function (ee) {
   window.open('https://www.youtube.com/watch?v=c3S0K5uMccc')
 })
 </script>
-</body>
 <script>
   const future = new Date().toLocaleTimeString();
   document.getElementById('surgery').innerHTML = future;
@@ -5176,4 +5179,17 @@ document.getElementById('benjamin').addEventListener('click', function (ee) {
     setTimeout(tick, 1000);
   }
 </script>
+<canvas
+  style="
+    background: #2b1be891;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 30px);
+    left: 0;
+    margin-top: 30px;
+    mix-blend-mode: unset;
+    top: 0;
+  "
+></canvas>
+</body>
 <html>

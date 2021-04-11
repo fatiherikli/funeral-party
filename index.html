@@ -55,12 +55,12 @@
     text-align: center; font-family: helvetica, sans-serif; position: absolute; bottom: 0;
     padding: 10px 20px;
     z-index: 999;
-    background: black;
+    background: #dedede;
     color: darkgray;
    }
 
-   a { color: white; }
-   a:visited { color: white; }
+   a { color: gray; }
+   a:visited { color: gray; }
 
    time {
     display: inline-block;
@@ -102,15 +102,26 @@
 
     document.getElementById('badsector').style.display = 'defrag';
     document.getElementById('badsector').style.display = 'block';
+    document.getElementById('verybadsector').style.display = 'block';
     alert('Ketum')
     document.getElementById('badsector').style.display = 'none';
+    setTimeout(function () {
+      document.getElementById('verybadsector').style.mixBlendMode = 'overlay';
+
+      setTimeout(function () {
+      document.getElementById('verybadsector').style.mixBlendMode = 'unset';
+      setTimeout(function () {
+      document.getElementById('verybadsector').style.visibility = 'hidden';
+    }, 1000);
+    }, 1000);
+    }, 1000);
     
   "
 
   >Security</button>
-  <img id="badsector" width="35%" style="display: none; position: absolute; z-index: 9;" src="https://mm.pwn.pl/ency/jpg/583/16/d08i0192.jpg" />
+  <img id="badsector" width="35%" style="display: none; z-index: 1;mix-blend-mode: color-burn; position: absolute; z-index: 9;" src="https://mm.pwn.pl/ency/jpg/583/16/d08i0192.jpg" />
+  <img id="verybadsector" width="35%" style="display: none; z-index: 2; mix-blend-mode: unset; position: absolute; z-index: 9;" src="https://mm.pwn.pl/ency/jpg/583/16/d08i0192.jpg" />
  <button
-
 
   style="
     float: right;
@@ -188,7 +199,7 @@
 <br twotimes />
 
 <svg
-  style="margin-top: 50px;"
+  style="margin-top: 20px;"
   id="patient"
    xmlns:dc="https://purl.org/dc/elements/1.1/"
    xmlns:cc="https://creativecommons.org/ns"
@@ -212,7 +223,7 @@
    xml:space="preserve"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Nervous_system_diagram-en.svg"
-   width="620">
+   width="550">
     <metadata
      id="metadata321"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
@@ -5180,7 +5191,9 @@ document.getElementById('benjamin').addEventListener('click', function (ee) {
   }
 </script>
 <canvas
+  id="surgery-mask"
   style="
+    display: none;
     background: #2b1be891;
     position: absolute;
     width: 100%;

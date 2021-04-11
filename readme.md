@@ -1,3 +1,3 @@
 ![tape](https://raw.githubusercontent.com/fatiherikli/hospital/master/interface.svg)
 
-<https://sad-saha-e575ef.netlify.app/>
+<https://fix-everything.netlify.app>

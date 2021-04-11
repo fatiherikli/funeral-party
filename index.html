@@ -55,6 +55,9 @@
     text-align: center; font-family: helvetica, sans-serif; position: absolute; bottom: 20px;
     padding: 0 20px;
    }
+
+   a { color: default; }
+   a:visited { color: blue; }
   </style>
   <body
         style="
@@ -5114,5 +5117,13 @@
 </g></svg>
 <div class="iris">I</div>
 <div class="disc rotating">X</div>
-<footer>This is an <a href="https://github.com/fatiherikli/hospital?ecnalubma">open-source</a> <a href="https://nerver.net?112-fix-me">health line</a>. Play <a href="https://www.youtube.com/watch?v=c3S0K5uMccc">nice</a> songs</footer>
+<footer>This is an <a href="https://github.com/fatiherikli/hospital?ecnalubma">open-source</a> <a href="https://nerver.net?112-fix-me">health line</a>. <a href="https://www.youtube.com/watch?v=c3S0K5uMccc" id="benjamin">You can listen nice songs too</a></footer>
+<script>
+
+
+document.getElementById('benjamin').addEventListener('click', function (ee) {
+  ee.preventDefault();
+  window.open('https://www.youtube.com/watch?v=c3S0K5uMccc')
+})
+</script>
 </body><html>

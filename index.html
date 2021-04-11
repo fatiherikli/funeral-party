@@ -119,10 +119,10 @@
     alert('Ketum')
     document.getElementById('badsector').style.display = 'none';
     setTimeout(function () {
-      document.getElementById('verybadsector').style.mixBlendMode = 'overlay';
+      document.getElementById('verybadsector').style.transform = 'rotate(180deg)';
 
       setTimeout(function () {
-      document.getElementById('verybadsector').style.mixBlendMode = 'unset';
+      document.getElementById('verybadsector').style.transform = 'rotate(360deg)';
       setTimeout(function () {
       document.getElementById('verybadsector').style.visibility = 'hidden';
     }, 1000);

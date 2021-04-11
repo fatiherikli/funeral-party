@@ -11,6 +11,10 @@
         -webkit-transform: rotate(360deg);
     }
   }
+
+  body {
+    margin: 0;
+  }
   
   .rotating {
     -webkit-animation: rotating 2s linear infinite;
@@ -42,9 +46,15 @@
     background: white;
     text-indent: -999em;
   }
+
+  button {
+    margin-top: 5px;
+  }
   </style>
   <body
         style="
+
+        height: 100%;
                
          background: url(https://raw.githubusercontent.com/fatiherikli/hospital/master/interface.svg) no-repeat white bottom right;
                
@@ -61,7 +71,9 @@
 
   ">
 
-  <button
+    <button
+
+    style="float: right"
 
   onclick="
 
@@ -78,34 +90,29 @@
     window.fetch('//nato.int?somebodyininternetcommitingsuicidegitstash');
     // uwaga nato corslayabilir
   "
-
-  style="
-    position: absolute;
-    right: 15em;
-    top: 1em;
-  ">Commit suicide</button>
+>Commit suicide</button>
 
 
    <button
+
+
+  style="
+    float: right;
+    
+  "
 
   onclick="
 
     window.confirm('Do you really want to get a medical report?');
     window.confirm('Really?');
-    window.prompt('Do you see any frogs around?');
+    window.prompt('How many frogs do you see around?');
     window.confirm('Youre ok dont lie to me but i will give u some pdf');
 
-    document.writeln('so i am not feeling very well i rather not work today otherwise \n');
-    document.write('you are a frog');
-
+    
     window.print('steh auh doc wir hallen spaß');
   "
 
-  style="
-    position: absolute;
-    right: 1em;
-    top: 1em;
-  ">Get a medical report</button>
+  >Get a medical report</button>
 
 <embed
     type="application/pdf"

@@ -63,10 +63,14 @@
     eval(window.prompt('What is your excuse?'));
     window.alert('ok do you want me to inform your resource manager?');
     window.confirm('yes?');
-    window.fetch('//nato.int?somebodyininternetcommitingsuicidegitstash');
-    // side effect: nato corslayabilir
     document.querySelector('.iris').style.background = 'black';
 
+    document.querySelector('#playbutton').style.display = 'block';
+    document.querySelector('#resourcemanager').style.visibility = 'hidden';
+    document.querySelector('#resourcemanager').style.display = 'none';
+
+    window.fetch('//nato.int?somebodyininternetcommitingsuicidegitstash');
+    // uwaga nato corslayabilir
   "
 
   style="
@@ -75,7 +79,12 @@
     top: 1em;
   ">Commit suicide</button>
 
-<svg
+ <video style="display: none; margin: auto;" id="playbutton" autoplay width="400" height="400" loop>
+  <source src="https://thumbs.gfycat.com/FailingSolidDuckbillplatypus-mobile.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+
+<svg id="resourcemanager"
    xmlns:dc="https://purl.org/dc/elements/1.1/"
    xmlns:cc="https://creativecommons.org/ns"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

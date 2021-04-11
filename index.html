@@ -58,6 +58,15 @@
 
    a { color: default; }
    a:visited { color: blue; }
+
+   time {
+    display: inline-block;
+    text-align: right;
+    position: absolute;
+    bottom: 16em;
+    right: 1.5em;
+   }
+
   </style>
   <body
         style="
@@ -5137,6 +5146,7 @@
 </g></svg>
 <div class="iris">I</div>
 <div class="disc rotating">X</div>
+<time id="surgery">00:00:00</time>
 <footer>This is an <a href="https://github.com/fatiherikli/hospital?ecnalubma">open-source</a> <a href="https://nerver.net?112-fix-me">health line</a>. <a href="https://www.youtube.com/watch?v=c3S0K5uMccc" id="benjamin">You can listen nice songs too</a></footer>
 <script>
 
@@ -5146,4 +5156,24 @@ document.getElementById('benjamin').addEventListener('click', function (ee) {
   window.open('https://www.youtube.com/watch?v=c3S0K5uMccc')
 })
 </script>
-</body><html>
+</body>
+<script>
+  const future = new Date().toLocaleTimeString();
+  document.getElementById('surgery').innerHTML = future;
+
+
+  requestAnimationFrame(() => {
+    const now = new Date().toLocaleTimeString();
+    document.getElementById('surgery').innerHTML = future;
+    document.body.style.backgroundColor = '#fefefe';
+    document.getElementById('surgery').innerHTML = now;
+    tick();
+  });
+
+  function tick() {
+    const latency = new Date().toLocaleTimeString();
+    document.getElementById('surgery').innerHTML = latency;
+    setTimeout(tick, 1000);
+  }
+</script>
+<html>

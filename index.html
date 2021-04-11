@@ -1,2 +1,33 @@
-thats enough
-so some white noise
+<html>
+  <head>
+    <title>White noise generator</title>
+   </head>
+   <style>
+   @-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+  }
+
+  .disc {
+    margin: 10em auto;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background: #21FA90;
+    transition-duration: 1;
+    transition-property: transform;
+    transform: rotate(360deg);
+  }
+  </style>
+  <body>
+    <div class="disc rotating"></div>
+  </body>
+</html>
